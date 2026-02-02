@@ -1,0 +1,110 @@
+/* ValentineCard.css */
+:root {
+  --gold: #d4af37;
+  --dark-red: #800000;
+  --cream: #fffdd0;
+}
+
+.card-container {
+  height: 100vh;
+  background: radial-gradient(circle, #333, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+}
+
+/* Teddy Bear Construction */
+.teddy {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.face {
+  width: 100px;
+  height: 85px;
+  background: #a67c52;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  z-index: 2;
+}
+
+.ear {
+  width: 35px;
+  height: 35px;
+  background: #a67c52;
+  border-radius: 50%;
+  position: absolute;
+}
+.ear.left { top: 0; left: 20px; }
+.ear.right { top: 0; right: 20px; }
+
+.eye {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+}
+.eye.left { left: 25px; }
+.eye.right { right: 25px; }
+
+.snout {
+  width: 40px;
+  height: 30px;
+  background: #d2b48c;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 30px;
+}
+
+.yes-btn {
+  background: var(--gold);
+  color: black;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.yes-btn:hover {
+  transform: scale(1.1);
+}
+
+.no-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.1s ease;
+}
+
+/* Loading Animation */
+.heart-loader {
+  width: 50px;
+  height: 50px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  animation: beat 1s infinite alternate;
+}
+
+@keyframes beat {
+  to { transform: scale(1.2) rotate(45deg); }
+}
